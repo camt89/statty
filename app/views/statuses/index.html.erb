@@ -1,12 +1,10 @@
-<div class="page-header">
-<h1>The Statty Feed</h1>
-</div>
-
+<div class="container">
+<h1 class="page-header">The Statty Feed</h1>
 <%= link_to "Post an Update", new_status_path, class: "btn btn-danger" %>
-
+</div>
 <% @statuses.each do |status| %>
-<div class="status">
-  <strong><%= status.name %></strong>
+<div class="status container">
+  <strong>Name</strong>
   <p><%= status.content %></p>
   <div class="meta">
     <%= link_to time_ago_in_words(status.created_at) + " ago", status %><br>
